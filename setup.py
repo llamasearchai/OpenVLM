@@ -86,7 +86,7 @@ setup(
         "PyPI": "https://pypi.org/project/open-vlm/",
     },
     packages=find_packages(exclude=["tests*", "docs*", "examples*", "configs*"]),
-    license="Apache-2.0",
+    license="MIT",
     keywords=[
         "vision-language",
         "multimodal",
@@ -104,7 +104,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
-        "License :: OSI Approved :: Apache Software License", # Corrected from Apache License 2.0
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Intended Audience :: Developers",
         "Intended Audience :: Science/Research",
