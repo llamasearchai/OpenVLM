@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "Apache-2.0"}
 authors = [
-    {name = "Jina AI", email = "hello@jina.ai"},
+    {name = "Nik Jois", email = "nikjois@llamasearch.ai"},
 ]
 keywords = [
     "vision-language",

@@ -73,8 +73,8 @@ extras_require["full"] = sum(extras_require.values(), [])
 setup(
     name="open-vlm",
     version="0.1.0",  # Consider using dynamic version from __version__.py
-    author="Jina AI",
-    author_email="hello@jina.ai",
+    author="Nik Jois",
+    author_email="nikjois@llamasearch.ai",
     description="OpenVLM: Pioneering Vision-Language Intelligence for Engineering.",
     long_description=long_description,
     long_description_content_type="text/markdown",
