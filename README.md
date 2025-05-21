@@ -99,27 +99,7 @@ open-vlm infer --model-path ./output/vision_sft_experiment --image-path diagram.
 open-vlm serve --model-path ./output/vision_sft_experiment --port 8000
 ```
 
-## Project Roadmap
-
-### Short-Term Goals (3-6 Months)
-- Enhanced Datasette and LLM integration
-- Standardized benchmark suite
-- Improved GUI interaction module
-- Expanded model support
-- Additional examples and tutorials
-
-### Mid-Term Goals (6-12 Months)
-- Advanced reasoning capabilities
-- Multi-modal data fusion
-- Collaborative AI agents
-- SQLite-utils integration
-
-### Long-Term Vision
-- AI co-pilot for engineers
-- Generative engineering design
-- Self-improving systems
-
-## Architecture
+## Architecture Overview
 
 OpenVLM is built upon a modular architecture to ensure flexibility and scalability:
 
@@ -134,12 +114,12 @@ OpenVLM/
 │   ├── installation.md
 │   ├── data_preparation.md
 │   ├── cli_usage.md
-│   └── architecture.md          # (To be created)
+│   └── architecture.md
 ├── examples/                    # Practical examples and use-cases
 │   └── basic_usage.py
 ├── open_vlm/                    # Core library code
 │   ├── __init__.py
-│   ├── api/                     # API endpoints (future)
+│   ├── api/                     # API endpoints
 │   ├── cli/                     # Command-line interface logic
 │   ├── config/                  # Configuration dataclasses and parsers
 │   ├── core/                    # Main VLM engineering components
