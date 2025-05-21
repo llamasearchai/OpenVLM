@@ -1,0 +1,62 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0 # Use a recent, stable version
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-added-large-files
+        args: [--maxkb=1024] # Max 1MB, adjust as needed
+    -   id: check-merge-conflict
+    -   id: detect-private-key
+
+-   repo: https://github.com/psf/black
+    rev: 23.7.0 # Use a version consistent with your project
+    hooks:
+    -   id: black
+        args: [--line-length=88] # Or your preferred line length
+
+-   repo: https://github.com/PyCQA/isort
+    rev: 5.12.0 # Use a version consistent with your project
+    hooks:
+    -   id: isort
+        args: ["--profile", "black", "--filter-files"]
+
+-   repo: https://github.com/PyCQA/pylint
+    rev: v2.17.5 # Or a specific version you prefer
+    hooks:
+    -   id: pylint
+        args:
+          - --errors-only # Start with errors-only, can be relaxed later
+          # - --rcfile=.pylintrc # Optional: if you have a .pylintrc
+        files: ^open_vlm/.*
+        # exclude: ^tests/.*
+
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.5.1 # Check for the latest mypy version supported by mirrors-mypy
+    hooks:
+    -   id: mypy
+        args: [--ignore-missing-imports, --install-types, --non-interactive]
+        additional_dependencies: [
+          # Add any specific typeshed dependencies your project needs, e.g.:
+          # "types-requests",
+          # "types-PyYAML"
+        ]
+        files: ^open_vlm/.*
+
+# To add later, once doc generation is set up:
+# -   repo: https://github.com/codespell-project/codespell
+#     rev: v2.2.5
+#     hooks:
+#     -   id: codespell
+#         args: [
+#             "--ignore-words-list", "ওয়্যার", # Example: ignore specific words if needed
+#             "--skip", "*.pyc,*.egg,*.png,*.svg,*.jsonl,*.lock,poetry.lock,*.bin"
+#         ]
+
+# Consider adding a hook for ruff if you decide to use it for linting/formatting
+# -   repo: https://github.com/charliermarsh/ruff-pre-commit
+#     rev: 'v0.0.284' # Use the latest ruff version
+#     hooks:
+#     -   id: ruff
+#         args: [--fix, --exit-non-zero-on-fix] 
